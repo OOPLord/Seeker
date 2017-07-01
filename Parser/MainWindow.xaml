@@ -1,0 +1,74 @@
+﻿<Window x:Class="Parser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Parser"
+        mc:Ignorable="d"
+        Title="TextParser3000" Height="300" Width="300" Icon=".\Resourses\nau.jpg">
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource=".\Resourses\free-photo-background-952.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <TextBlock Text="Welcome to TextParser3000" FontSize="20px" FontFamily="BAUHAUS 93"
+                   VerticalAlignment="Top" HorizontalAlignment="Center" 
+                   Margin="0 7 0 0" />
+
+        <TextBlock Text="Input path to READ FROM the file."
+                   VerticalAlignment="Top" HorizontalAlignment="Left" 
+                   Margin="20 45 0 0" />
+        
+        <TextBox Name="FromTextBox" 
+                 Width="180px" Height="20px" 
+                 VerticalAlignment="Top" HorizontalAlignment="Left" 
+                 Margin="20 65 0 0" />
+        <Button Content="File..." 
+                Click="ReadFromFileChooseButton"
+                Width="70px" Height="20px" 
+                VerticalAlignment="Top" HorizontalAlignment="Right" 
+                Margin="0 65 10 0"/>
+
+        <TextBlock Text="Input path to WRITE TO the file."
+                   VerticalAlignment="Top" HorizontalAlignment="Left" 
+                   Margin="20 170 0 0" />
+
+        <TextBlock Text="Input Name of the new file."
+                   VerticalAlignment="Top" HorizontalAlignment="Left" 
+                   Margin="20 110 0 0" />
+
+        <TextBox Name="Name"
+                 Width="180px" Height="20px" 
+                 VerticalAlignment="Top" HorizontalAlignment="Left" 
+                 Margin="20 130 0 0" />
+        <Button Content="Random" 
+                Click="Randomizer"
+                Width="70px" Height="20px" 
+                VerticalAlignment="Top" HorizontalAlignment="Right" 
+                Margin="0 130 10 0"/>
+
+        <TextBox Name="ToTextBox"
+                 Width="180px" Height="20px" 
+                 VerticalAlignment="Top" HorizontalAlignment="Left" 
+                 Margin="20 190 0 0" />
+        <Button Content="File..." 
+                Click="WriteToFileChooseButton"
+                Width="70px" Height="20px" 
+                VerticalAlignment="Top" HorizontalAlignment="Right" 
+                Margin="0 190 10 0"/>
+
+        <Button Content="Exit" 
+                Click="Exit"
+                Width="80px" Height="20px" 
+                VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                Margin="30 0 0 10"/>
+        <Button Content="Parse!"
+                Click="DoTheParsing"
+                Width="80px" Height="20px" 
+                VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                Margin="0 0 20 10"/>
+
+    </Grid>
+</Window>
